@@ -413,6 +413,103 @@ blockquote {
         border-radius: 10px;
     }
 
+    /* Review Books */
+.featured_boks {
+  width: 100%;
+  padding: 50px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.featured_boks h1 {
+  font-size: 45px;
+  color: rgb(177, 116, 233);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+/* Wrapper */
+.featured_book_wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Book container (slides) */
+.featured_book_box {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Book card */
+.featured_book_card {
+  min-width: 250px;
+  max-width: 250px;
+  height: 470px;
+  margin: 0 15px;
+  border: 1px solid rgb(177, 116, 233);
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.featured_book_card:hover {
+  box-shadow: 0 0 12px rgba(177, 116, 233, 0.5);
+}
+
+.featured_book_img img {
+  width: 150px;
+  height: auto;
+}
+
+/* Arrows */
+.book-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(177, 116, 233);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.book-arrow:hover {
+  background: rgb(131, 131, 218);
+}
+
+.book-arrow.left {
+  left: -20px;
+}
+
+.book-arrow.right {
+  right: -20px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .featured_book_card {
+    min-width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .book-arrow.left {
+    left: 10px;
+  }
+
+  .book-arrow.right {
+    right: 10px;
+  }
+}
+
 
     /* artciles */
 
@@ -773,19 +870,6 @@ blockquote {
     width: 220px;
   }
 
-  /* BOOKS */
-  .featured_boks h1 {
-    font-size: 28px;
-  }
-  .featured_boks .featured_book_box {
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-  }
-  .featured_boks .featured_book_box .featured_book_card {
-    width: 100%;
-    height: auto;
-  }
-
   /* ARTICLES */
   .articles h1 {
     font-size: 28px;
@@ -834,3 +918,4 @@ blockquote {
     font-size: 22px;
   }
 }
+
