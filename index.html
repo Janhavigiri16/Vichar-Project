@@ -1,181 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VICHAR_ATIVICHAR</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICHAR_ATIVICHAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <img src="logo2.jpeg" alt="Vichar Ativichar" />
-    </div>
-    <nav class="nav" id="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about-author">Author</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#review-books">Review Books</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero-slider" id="hero">
-    <div class="slides">
-      <img src="image/slider2.jpeg" alt="Slide 1" class="active" />
-      <img src="image/slider5.jpeg" alt="Slide 2" />
-    </div>
-  </section>
+    <section>
 
-  <!-- ABOUT AUTHOR -->
-  <section class="about-author-section" id="about-author">
+        <nav>
+
+            <div class="logo">
+                <!-- <h2>Vichar_Ativichar</h2> -->
+                <img src="logo2.jpeg" alt="" width="400" height="300">
+            </div>
+
+            <ul>
+                <li><a href="vichar.html">Home</a></li>          
+                <li><a href="#">About</a></li>  
+                <li><a href="#">Review-Books</a></li>  
+                <li><a href="#">E-Book</a></li>  
+                <li><a href="#">Article</a></li>  
+                <li><a href="#">Contact</a></li>     
+            </ul>
+
+            <div class="social_icon"> 
+                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                <form action="" class="search-form">
+                    <input type="search" name="" placeholder="search here..." id="search-box">
+                    <label for="search-box" class="fas fa-search"></label>
+                </form>
+                <!-- <i class="fa-solid fa-heart"></i> -->
+            </div>
+        </nav>
+
+    <!-- Hero Slider Section -->
+
+        <section class="hero-slider">
+                <div class="slides">
+                    <img src="image/slider2.jpeg" alt="Slide 1" class="active">
+                    <img src="image/slider5.jpeg" alt="Slide 2">
+                    
+                </div>
+        </section>
+    </section>
+    
+    
+    <!-- About author front page -->
+
+<section class="about-author-section">
     <div class="about-author-container">
-      <div class="about-author-photo">
-        <img src="image/janhavi.jpeg" alt="Author Janhavi" />
-      </div>
-      <div class="about-author-text">
-        <h2>About The Author</h2>
-        <p>
-          Janhavi Giri, a passionate writer since 8th grade, shares real-life thoughts and emotions through her platform <strong>Vichar Ativichar</strong>. Her words capture emotions we all live but seldom express.
-        </p>
-        <blockquote>
-          "Writing, for me, is about holding a mirror to life — so someone, somewhere, whispers, this is exactly how I feel."
-        </blockquote>
-        <a href="about_author.html" class="about-btn">Know More</a>
-      </div>
-    </div>
-  </section>
+        
+        <!-- Left side - Photo -->
+        <div class="about-author-photo">
+            <img src="image/janhavi.jpeg" alt="Janhavi Giri">
+        </div>
 
-  <!-- ABOUT US -->
-  <section class="about" id="about">
+        <!-- Right side - Text + Button -->
+        <div class="about-author-text">
+            <h2>About The Author</h2>
+            <p>
+                Janhavi Giri, a passionate writer since 8th grade, shares 
+                real-life thoughts and emotions through her platform 
+                <strong>Vichar Ativichar</strong>. Her words capture 
+                the emotions we all live but seldom express.  
+                She often draws inspiration from everyday experiences, 
+                weaving simple observations into powerful reflections.  
+                Alongside her creative journey, she balances her professional career, 
+                proving that passion and profession can walk hand in hand.
+            </p>
+            <blockquote>
+                "Writing, for me, is about holding a mirror to life — so someone, somewhere, whispers, this is exactly how I feel."
+            </blockquote>
+            <a href="about_author.html" class="about-btn">Know More</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- About -->
+
+   <div class="about">
+    <!-- Left side image -->
     <div class="about_image">
-      <img src="about.png" alt="About Us" />
+        <img src="about.png" alt="About Us">
     </div>
+
+    <!-- Right side text -->
     <div class="about_tag">
-      <h1>About Us</h1>
-      <p>
-        Vichar Ativichar is a thoughtful space dedicated to words that spark reflection, emotion, and dialogue. Readers explore original articles on everyday experiences, social themes, and introspective ideas.
-      </p>
-      <p id="more-text" style="display: none;">
-        Alongside personal writings, the platform offers a curated selection of books—some authored by me, others published by trusted publishers. Each book is a journey waiting to be experienced and shared.
-      </p>
-      <a href="javascript:void(0);" id="read-more-btn" class="about_btn">Read More</a>
-      <a href="javascript:void(0);" id="read-less-btn" class="about_btn" style="display:none;">Read Less</a>
-    </div>
-  </section>
+        <h1>About Us</h1> 
+        <p id="about-text">
+            Vichar Ativichar is a thoughtful space dedicated to words that spark reflection,
+            emotion, and dialogue. Here, readers can explore original articles that delve into 
+            everyday experiences, social themes, and introspective ideas. The platform also offers
+            a curated selection of books—both authored by me and published by various trusted
+            publishers—available for reading, reviewing, and ordering. Whether you're here to discover
+            new perspectives or to find your next meaningful read, 
+            Vichar Ativichar invites you to pause, think deeper, and engage with stories that matter.
+        </p>
 
-  <!-- REVIEW BOOKS -->
-  <section class="featured_boks" id="review-books">
-    <h1>Review Books</h1>
-    <div class="featured_book_wrapper">
-      <button class="book-arrow left">&#10094;</button>
-      <div class="featured_book_box">
-        <!-- Book Cards -->
-        <div class="featured_book_card">
-          <div class="featured_book_img"><img src="image/book_1.jpg" /></div>
-          <div class="featured_book_tag">
-            <h4>Majet Jagav Kasa?</h4>
-            <p class="writer">Shivraj Gorale</p>
-            <p class="book_price">₹340</p>
-          </div>
-        </div>
-        <div class="featured_book_card">
-          <div class="featured_book_img"><img src="image/book_2.jpg" /></div>
-          <div class="featured_book_tag">
-            <h4>Stop Overthinking</h4>
-            <p class="writer">Nick Trenton</p>
-            <p class="book_price">₹198</p>
-          </div>
-        </div>
-        <div class="featured_book_card">
-          <div class="featured_book_img"><img src="image/book_3.jpg" /></div>
-          <div class="featured_book_tag">
-            <h4>Mazya Aayushy...?</h4>
-            <p class="writer">Manoj Ambike</p>
-            <p class="book_price">₹225</p>
-          </div>
-        </div>
-        <div class="featured_book_card">
-          <div class="featured_book_img"><img src="image/book_4.jpg" /></div>
-          <div class="featured_book_tag">
-            <h4>Karn Putra aani Astra</h4>
-            <p class="writer">Manoj Ambike</p>
-            <p class="book_price">₹308</p>
-          </div>
-        </div>
-        <div class="featured_book_card">
-          <div class="featured_book_img"><img src="image/book_5.jpg" /></div>
-          <div class="featured_book_tag">
-            <h4>The Art of Being Alone</h4>
-            <p class="writer">Renuka Gavrani</p>
-            <p class="book_price">₹204</p>
-          </div>
-        </div>
-      </div>
-      <button class="book-arrow right">&#10095;</button>
-    </div>
-  </section>
+        <!-- Hidden extra text -->
+        <p id="more-text" style="display: none;">
+            Vichar Ativichar is more than just a space for words—it is a sanctuary for thoughts,
+            emotions, and perspectives that often go unspoken in the rush of everyday life.  
+            Here, you will find original articles that touch upon everyday experiences, social themes, 
+            and deeply introspective ideas—pieces of writing that invite you to pause, question, and rediscover.  
 
-  <!-- ARTICLES -->
-  <section class="articles" id="articles">
-    <h1>Articles</h1>
+            Alongside personal writings, the platform offers a handpicked collection of books—some authored by me, 
+            others published by trusted publishers. Each book is a journey waiting to be experienced, reviewed, 
+            and shared.  
+
+            Whether you come here seeking inspiration, thoughtful storytelling, or your next meaningful read, 
+            Vichar Ativichar welcomes you to slow down, reflect, and engage with stories that truly matter.
+        </p>
+
+        <!-- Buttons -->
+        <a href="javascript:void(0);" id="read-more-btn" class="about_btn">Read More</a>
+        <a href="javascript:void(0);" id="read-less-btn" class="about_btn" style="display:none;">Read Less</a>
+    </div>
+</div>
+
+
+
+    <!-- Books -->
+
+    <div class="featured_boks">
+
+        <h1>Review Books</h1>
+
+        <div class="featured_book_box">
+            
+            <div class="featured_book_card">
+                
+                <div class="featured_book_img">
+                    <img src="image/book_1.jpg">
+            </div>
+
+            <div class="featured_book_tag">
+                <h4>Majet Jagav Kasa?</h4>
+                <p class="writer">Shivraj Gorale</p>
+                <div class="categories">Motivational, Lifestyle</div>
+                <p class="book_price">340/-</p>
+                <a href="https://www.amazon.in/-/hi/Shivraj-Gorle/dp/8174346392" class="f_btn">Buy the Book</a>
+                
+                
+            </div>
+
+        </div>
+
+
+        <div class="featured_book_card">
+                
+                <div class="featured_book_img">
+                    <img src="image/book_2.jpg">
+            </div>
+
+            <div class="featured_book_tag">
+                <h4>Stop Overthinking</h4>
+                <p class="writer">Nick Trenton</p>
+                <div class="categories">Psychological</div>
+                <p class="book_price">198/-</p>
+                <a href="https://www.amazon.in/%E0%A4%93%E0%A4%B5%E0%A5%8D%E0%A4%B9%E0%A4%B0%E0%A4%A5%E0%A4%BF%E0%A4%82%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%97-Overthinking-%E0%A4%85%E0%A4%A4%E0%A4%BF%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE-%E0%A4%9A%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%A4%E0%A5%82%E0%A4%A8-%E0%A4%AA%E0%A4%A1%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80/dp/9391282326" class="f_btn">Buy the Book</a>
+            </div>
+
+        </div>
+
+
+        <div class="featured_book_card">
+                
+                <div class="featured_book_img">
+                    <img src="image/book_3.jpg">
+            </div>
+
+            <div class="featured_book_tag">
+                <h4>Mazya Aayusyat Asa Ka Ghadata?</h4>
+                <p class="writer">Manoj Ambike</p>
+                <div class="categories">Psychological</div>
+                <p class="book_price">225/-</p>
+                <a href="https://www.amazon.in/-/hi/Manoj-Ambike/dp/9385223402" class="f_btn">Buy the Book</a>
+            </div>
+
+        </div>
+
+
+        <div class="featured_book_card">
+                
+                <div class="featured_book_img">
+                    <img src="image/book_4.jpg">
+            </div>
+
+            <div class="featured_book_tag">
+                <h4>Karn Putra aani Astra</h4>
+                <p class="writer">Manoj Ambike</p>
+                <div class="categories">Kadambari,Historic</div>
+                <p class="book_price">308/-</p>
+                <a href="https://www.amazon.in/Karnputra-Kadambari-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B0%E0%A4%AC%E0%A5%8D%E0%A4%A7%E0%A4%BE%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE-%E0%A4%AD%E0%A5%87%E0%A4%A6%E0%A4%A3%E0%A4%BE%E0%A4%B1%E0%A5%8D%E0%A4%AF%E0%A4%BE-%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%AA%E0%A5%81%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE/dp/9388550390" class="f_btn">Buy the Book</a>
+            </div>
+
+        </div>
+
+        <div class="featured_book_card">
+                
+                <div class="featured_book_img">
+                    <img src="image/book_5.jpg">
+            </div>
+
+            <div class="featured_book_tag">
+                <h4>The Art of Being Alone</h4>
+                <p class="writer">Renuka Gavrani</p>
+                <div class="categories">Psychological</div>
+                <p class="book_price">204/-</p>
+                <a href="https://www.amazon.in/-/hi/Renuka-Gavrani/dp/9355434022/ref=sr_1_1?adgrpid=157964784218&dib=eyJ2IjoiMSJ9.V0Itj8XmQeWoKx1ViSCcOnDmw0Yf4IH2z84uqUGrIZ9tTolWvmTOECFqP8cJlgfnzpOMoCk7nzwZgD4vcKnPIhV7GaC1As27JLl3a5Z7wkFtCiQWmb1xgqQfG9SAvJA3x1fmdbfubVimveNL2GU1bhL1Ofe8AOQKwZQQU74JrBun3_ws2kOuPRYKDQbTq6JuBxW8Ng8xVt5qSve84uJRMZYhpWmA2lCAi6Ns5ogpgko.szq5-u0FaFYRevLUXU9ejx3gxjL9kj_gsENcoDho_hk&dib_tag=se&gad_source=1&hvadid=685041228897&hvdev=c&hvlocphy=9301354&hvnetw=g&hvqmt=e&hvrand=18223605416986212771&hvtargid=kwd-317587686628&hydadcr=24540_2265408&keywords=the+art+of+being+alone&mcid=2d7ab59690503cdbbb8ff65917e4c4df&qid=1755018651&sr=8-1" class="f_btn">Buy the Book</a>
+            </div>
+
+        </div>
+
+           
+        </div>    
+    </div>
+
+
+<!-- Articles Section -->
+<section class="articles" id="articles">
+    <h1 data-animate>Articles</h1>
+    
     <div class="articles-container">
-      <a href="article1.html" class="article-card">
-        <img src="image/article1.jpg" alt="Article 1" />
-        <h3>🚉आयुष्याची रेल्वे</h3>
-      </a>
-      <a href="article2.html" class="article-card">
-        <img src="image/article2.jpg" alt="Article 2" />
-        <h3>थोडंसं थांबून बघ ना…</h3>
-      </a>
-      <a href="article3.html" class="article-card">
-        <img src="image/article3.jpg" alt="Article 3" />
-        <h3>🚆The Train of Life</h3>
-      </a>
+
+        <!-- Article Card 1 -->
+        <a href="article1.html" class="article-card" data-animate>
+            <img src="image/article1.jpg" alt="Article 1">
+            <h3>🚉आयुष्याची रेल्वे</h3>
+        </a>
+
+        <!-- Article Card 2 -->
+        <a href="article2.html" class="article-card" data-animate>
+            <img src="image/article2.jpg" alt="Article 2">
+            <h3>थोडंसं थांबून बघ ना…</h3>
+        </a>
+
+        <!-- Article Card 3 -->
+        <a href="article3.html" class="article-card" data-animate>
+            <img src="image/article3.jpg" alt="Article 3">
+            <h3>🚆The Train of Life</h3>
+        </a>
+
+        <!-- Article Card 4 -->
+        <a href="article4.html" class="article-card" data-animate>
+            <img src="image/article4.jpg" alt="Article 4">
+            <h3>Pause for a Moment…</h3>
+        </a>
+
+        <!-- Article Card 5 -->
+        <!-- <a href="article5.html" class="article-card" data-animate>
+            <img src="image/article5.jpg" alt="Article 5">
+            <h3>Journey Within</h3>
+        </a> -->
+
     </div>
+
+    <!-- View All Button -->
     <div class="view-all-container">
-      <a href="articles.html" class="view-all-btn">View all ›</a>
+        <a href="articles.html" class="view-all-btn">
+            View all <span class="arrow">›</span>
+        </a>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h2>Vichar Ativichar</h2>
-        <p>Vichar Ativichar is where thoughts take shape. Explore my latest articles, reflections, review books, and e-books.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#articles">Articles</a></li>
-          <li><a href="#review-books">Review Books</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h3>Follow</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-about">
+      <h2 class="footer-logo">Vichar Ativichar</h2>
+      <p>
+        Vichar_Ativichar is a space where thoughts take shape.  
+        Dive into my latest articles, explore deep reflections, and discover links to my review books and e-books.  
+        Whether you're here to read, reflect, or explore, there's something meaningful waiting for you.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Brand Story</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="review-books.html">Review Books</a></li>
+        <li><a href="about_author.html">Author</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-links">
+      <h3>Policies</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Copyrights Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/vichar_ativichar/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Vicharativichar"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.threads.com/@vichar_ativichar?hl=en"><i class="fab fa-threads"></i></a>
+        <a href="http://linkedin.com/in/janhavi-giri-5b0204368"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
-    <p class="footer-bottom">© 2025 Vichar Ativichar | All Rights Reserved</p>
-  </footer>
 
-  <script src="vichar.js" defer></script>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h4>Stay Up To Date</h4>
+    <p>Keep Up With All The Tea</p>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Join</button>
+    </form>
+  </div>
+
+  <!-- Bottom -->
+  <p class="footer-bottom">© 2025 Vichar Ativichar | All Rights Reserved</p>
+</footer>
+
+
+<script src="vichar.js" defer></script>
+
 </body>
 </html>
