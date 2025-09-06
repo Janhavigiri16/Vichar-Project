@@ -89,3 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// Toggle mobile menu
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector("section nav ul");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+});
