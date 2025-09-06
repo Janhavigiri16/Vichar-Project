@@ -63,6 +63,8 @@ section nav .social_icon form:hover{
 }
 
  
+
+
 /* hero slider */
 
 .hero-slider {
@@ -669,3 +671,166 @@ blockquote {
 }
 
      
+/* Mobile/Tab view */
+
+/* ----------------------------- */
+/* Tablet View (max-width: 1024px) */
+/* ----------------------------- */
+@media (max-width: 1024px) {
+  /* Navigation */
+  section nav {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  section nav .logo img {
+    height: 70px;
+    width: 70px;
+  }
+
+  section nav ul li {
+    padding: 0 8px;
+  }
+
+  /* Hero slider height smaller */
+  .hero-slider {
+    height: 450px;
+  }
+  .slides img {
+    height: 450px;
+  }
+
+  /* About section */
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about_image img {
+    width: 300px;
+  }
+
+  /* Books grid smaller */
+  .featured_boks .featured_book_box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------------------------- */
+/* Mobile View (max-width: 768px) */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  /* NAVIGATION */
+  section nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  section nav ul {
+    display: none; /* hide normal menu */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  section nav ul.show {
+    display: flex; /* show on toggle */
+  }
+
+  section nav li {
+    padding: 10px 0;
+  }
+
+  /* Add hamburger icon */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(177, 116, 233);
+  }
+
+  /* HERO SLIDER */
+  .hero-slider {
+    height: 280px;
+  }
+  .slides img {
+    height: 280px;
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .about_image img {
+    width: 220px;
+  }
+
+  /* BOOKS */
+  .featured_boks h1 {
+    font-size: 28px;
+  }
+  .featured_boks .featured_book_box {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+  .featured_boks .featured_book_box .featured_book_card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ARTICLES */
+  .articles h1 {
+    font-size: 28px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-links, .footer-social {
+    margin: 0;
+  }
+
+  /* Newsletter */
+  .newsletter input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .newsletter button {
+    width: 100%;
+  }
+}
+
+/* ----------------------------- */
+/* Very Small Phones (max-width: 480px) */
+/* ----------------------------- */
+@media (max-width: 480px) {
+  .about-author-photo img {
+    width: 150px;
+    height: 150px;
+  }
+  .about-author-text h2,
+  .featured_boks h1,
+  .articles h1 {
+    font-size: 22px;
+  }
+
+  .view-all-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    font-size: 22px;
+  }
+}
