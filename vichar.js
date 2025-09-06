@@ -1,133 +1,102 @@
+// ===== HERO SLIDER =====
+const slides = document.querySelectorAll(".slides img");
+let currentIndex = 0;
+const intervalTime = 4000;
 
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("[data-animate]");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-in");
-                observer.unobserve(entry.target); // Animate once
-            }
-        });
-    }, { threshold: 0.15 });
-
-    elements.forEach(el => observer.observe(el));
-});
-
-
-// Toggle Read More / Read Less
-document.addEventListener("DOMContentLoaded", function () {
-    const moreText = document.getElementById("more-text");
-    const readMoreBtn = document.getElementById("read-more-btn");
-    const readLessBtn = document.getElementById("read-less-btn");
-
-    readMoreBtn.addEventListener("click", function () {
-        moreText.style.display = "block";
-        readMoreBtn.style.display = "none";
-        readLessBtn.style.display = "inline-block";
-    });
-
-    readLessBtn.addEventListener("click", function () {
-        moreText.style.display = "none";
-        readMoreBtn.style.display = "inline-block";
-        readLessBtn.style.display = "none";
-    });
-});
-
-
-document.querySelectorAll('.social-btn').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        btn.style.boxShadow = "0 0 15px rgba(177,116,233,0.8)";
-    });
-    btn.addEventListener('mouseleave', () => {
-        btn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-    });
-});
-
-
-const newsletterForm = document.querySelector(".newsletter form");
-if (newsletterForm) {
-  newsletterForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const emailInput = newsletterForm.querySelector("input[type='email']");
-    const msg = document.createElement("p");
-    msg.id = "newsletterMsg";
-    newsletterForm.after(msg);
-
-    if (emailInput.value.trim() === "" || !emailInput.value.includes("@")) {
-      msg.textContent = "Please enter a valid email.";
-      msg.className = "error";
-    } else {
-      msg.textContent = "Thank you for subscribing!";
-      msg.className = "success";
-      emailInput.value = "";
-    }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
   });
 }
 
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slides img");
-  let currentIndex = 0;
-  const intervalTime = 4000; // 4 seconds
+setInterval(nextSlide, intervalTime);
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-  }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }
+// ===== HAMBURGER MENU =====
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
 
-  if (slides.length > 0) {
-    showSlide(currentIndex); // Show first slide
-    setInterval(nextSlide, intervalTime);
-  }
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("open");
 });
 
 
-// Toggle mobile menu
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector("section nav ul");
-
-  if (hamburger) {
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  }
-});
-
-// Review Books Slider
+// ===== BOOK CAROUSEL =====
 const bookBox = document.querySelector(".featured_book_box");
 const bookCards = document.querySelectorAll(".featured_book_card");
 const prevBtn = document.querySelector(".book-arrow.left");
 const nextBtn = document.querySelector(".book-arrow.right");
 
-let index = 0;
-const cardWidth = bookCards[0].offsetWidth + 30; // width + margin
+let scrollIndex = 0;
+let cardWidth = bookCards[0].offsetWidth + 20; // card + margin
 
-function updateSlide() {
-  bookBox.style.transform = `translateX(-${index * cardWidth}px)`;
+function updateCarousel() {
+  bookBox.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
 }
 
 // Next
 nextBtn.addEventListener("click", () => {
-  if (index < bookCards.length - 1) {
-    index++;
-    updateSlide();
+  if (scrollIndex < bookCards.length - 1) {
+    scrollIndex++;
+  } else {
+    scrollIndex = 0; // loop
   }
+  updateCarousel();
 });
 
 // Prev
 prevBtn.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    updateSlide();
+  if (scrollIndex > 0) {
+    scrollIndex--;
+  } else {
+    scrollIndex = bookCards.length - 1; // loop
   }
+  updateCarousel();
 });
 
+// Auto scroll every 5s
+setInterval(() => {
+  nextBtn.click();
+}, 5000);
+
+
+// ===== READ MORE / LESS =====
+const moreText = document.getElementById("more-text");
+const readMoreBtn = document.getElementById("read-more-btn");
+const readLessBtn = document.getElementById("read-less-btn");
+
+if (readMoreBtn && readLessBtn) {
+  readMoreBtn.addEventListener("click", () => {
+    moreText.style.display = "block";
+    readMoreBtn.style.display = "none";
+    readLessBtn.style.display = "inline-block";
+  });
+
+  readLessBtn.addEventListener("click", () => {
+    moreText.style.display = "none";
+    readMoreBtn.style.display = "inline-block";
+    readLessBtn.style.display = "none";
+  });
+}
+
+
+// ===== NEWSLETTER VALIDATION =====
+const newsletterForm = document.querySelector(".newsletter form");
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = newsletterForm.querySelector("input");
+    if (!input.value.includes("@")) {
+      alert("❌ Please enter a valid email.");
+    } else {
+      alert("✅ Thank you for subscribing!");
+      input.value = "";
+    }
+  });
+}
