@@ -379,6 +379,455 @@ body {
 }
 
 
+/* mobile/tab view */
+
+/* train marathi article */
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+/* Title */
+.article-title {
+    font-size: 32px;
+    text-align: center;
+    color: rgb(131, 131, 218);
+    margin-bottom: 10px;
+    border-bottom: 3px solid rgb(177, 116, 233);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Meta info */
+.article-meta {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.article-meta span {
+    margin: 0 10px;
+}
+
+/* Featured Image */
+.article-image img {
+    width: 100%;
+    height: 700px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Content */
+.article-content p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Quote box */
+blockquote {
+    font-style: italic;
+    color: #444;
+    background: #f3f3f3;
+    padding: 15px 20px;
+    border-left: 5px solid rgb(177, 116, 233);
+    margin: 25px 0;
+    border-radius: 6px;
+}
+
+/* Back Button */
+.back-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgb(131, 131, 218);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.back-btn a:hover {
+    background: rgb(177, 116, 233);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
 
 
+/* train english article */
+/* Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Article container */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Title */
+.article-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: rgb(131, 131, 218);
+    margin-bottom: 15px;
+}
+
+/* Meta info */
+.article-meta {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.article-meta span {
+    margin: 0 10px;
+}
+
+/* Image */
+.article-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Content */
+.article-content p {
+    font-size: 17px;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.article-content strong {
+    color: rgb(131, 131, 218);
+}
+
+.article-content em {
+    color: #555;
+    font-style: italic;
+}
+
+/* Blockquote */
+blockquote {
+    font-style: italic;
+    font-size: 18px;
+    background: #f5f5ff;
+    padding: 15px 20px;
+    border-left: 5px solid rgb(131, 131, 218);
+    margin: 25px 0;
+    border-radius: 6px;
+    color: #444;
+}
+
+/* Back Button */
+.back-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgb(131, 131, 218);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.back-btn a:hover {
+    background: rgb(177, 116, 233);
+    transform: translateY(-2px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px 15px;
+    }
+
+    .article-title {
+        font-size: 1.8rem;
+    }
+
+    .article-image img {
+        height: 300px;
+        border-radius: 0;
+    }
+
+    .article-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-title {
+        font-size: 20px;
+    }
+
+    .article-image img {
+        height: 220px;
+    }
+
+    .article-content p {
+        font-size: 15px;
+    }
+
+    .back-btn a {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* articles main page */
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Page Title Container */
+.page-title-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 40px;
+  padding: 20px 40px;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: rgb(177, 116, 233);
+  text-align: center;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: rgb(177, 116, 233);
+  left: 50%;
+  bottom: -8px;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.page-title:hover::after {
+  width: 100%;
+}
+
+.page-title-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Grid Layout */
+#articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1150px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+}
+
+/* Card Style */
+.article-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card h3 {
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: rgb(177, 116, 233);
+  font-weight: 600;
+  margin: 0;
+  border-top: 1px solid rgba(177, 116, 233, 0.2);
+  background: #fff;
+}
+
+/* Footer Social Section */
+#social-footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4f4f4;
+  margin-top: 30px;
+}
+
+#social-footer h3 {
+  margin-bottom: 25px;
+  color: rgb(177, 116, 233);
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-btn.youtube {
+  background: linear-gradient(45deg, #ff0000, rgb(177, 116, 233));
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Responsive - Articles Page */
+@media (max-width: 768px) {
+  .page-title-container {
+    max-width: 90%;
+    padding: 15px 20px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  #articles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .article-card h3 {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-btn {
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .article-card img {
+    height: 180px;
+  }
+
+  .social-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
 
