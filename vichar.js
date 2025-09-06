@@ -93,10 +93,11 @@ if (newsletterForm) {
     e.preventDefault();
     const input = newsletterForm.querySelector("input");
     if (!input.value.includes("@")) {
-      alert("❌ Please enter a valid email.");
+      alert("Please enter a valid email.");
     } else {
-      alert("✅ Thank you for subscribing!");
+      alert("Thank you for subscribing!");
       input.value = "";
     }
   });
 }
+
