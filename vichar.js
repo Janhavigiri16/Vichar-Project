@@ -101,3 +101,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Review Books Slider
+const bookBox = document.querySelector(".featured_book_box");
+const bookCards = document.querySelectorAll(".featured_book_card");
+const prevBtn = document.querySelector(".book-arrow.left");
+const nextBtn = document.querySelector(".book-arrow.right");
+
+let index = 0;
+const cardWidth = bookCards[0].offsetWidth + 30; // width + margin
+
+function updateSlide() {
+  bookBox.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+// Next
+nextBtn.addEventListener("click", () => {
+  if (index < bookCards.length - 1) {
+    index++;
+    updateSlide();
+  }
+});
+
+// Prev
+prevBtn.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateSlide();
+  }
+});
+
