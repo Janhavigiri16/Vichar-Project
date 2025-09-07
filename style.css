@@ -724,17 +724,6 @@ blockquote {
     width: 120px;
   }
 
-  /* Hero Slider */
-  .hero-slider {
-    height: auto;
-  }
-  .hero-slider img {
-    position: relative;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-  }
-
   /* About Sections */
   .about-author-container,
   .about {
@@ -759,10 +748,6 @@ blockquote {
 }
 
 @media (max-width: 768px) {
-  /* Hero */
-  .hero-slider img {
-    max-height: 300px;
-  }
 
   /* Articles Grid */
   #articles-grid,
@@ -792,5 +777,6 @@ blockquote {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 
