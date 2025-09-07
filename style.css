@@ -99,6 +99,26 @@ section nav .social_icon form:hover{
   z-index: 1;
 }
 
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+  .hero-slider {
+    height: 300px; /* smaller height for tablets and mobiles */
+  }
+
+  .slides img {
+    height: 300px; /* match the slider height */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-slider {
+    height: 200px; /* smaller height for mobile phones */
+  }
+
+  .slides img {
+    height: 200px; /* match the slider height */
+  }
+}
 
 
 /* about author */
@@ -772,4 +792,5 @@ blockquote {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
