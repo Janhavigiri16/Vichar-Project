@@ -1,76 +1,75 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("[data-animate]");
+  /* ===================== */
+  /* Animate on Scroll */
+  /* ===================== */
+  const elements = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+          observer.unobserve(entry.target); // Animate once
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  elements.forEach((el) => observer.observe(el));
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-in");
-                observer.unobserve(entry.target); // Animate once
-            }
-        });
-    }, { threshold: 0.15 });
+  /* ===================== */
+  /* Read More / Read Less */
+  /* ===================== */
+  const moreText = document.getElementById("more-text");
+  const readMoreBtn = document.getElementById("read-more-btn");
+  const readLessBtn = document.getElementById("read-less-btn");
 
-    elements.forEach(el => observer.observe(el));
-});
-
-
-// Toggle Read More / Read Less
-document.addEventListener("DOMContentLoaded", function () {
-    const moreText = document.getElementById("more-text");
-    const readMoreBtn = document.getElementById("read-more-btn");
-    const readLessBtn = document.getElementById("read-less-btn");
-
+  if (readMoreBtn && readLessBtn && moreText) {
     readMoreBtn.addEventListener("click", function () {
-        moreText.style.display = "block";
-        readMoreBtn.style.display = "none";
-        readLessBtn.style.display = "inline-block";
+      moreText.style.display = "block";
+      readMoreBtn.style.display = "none";
+      readLessBtn.style.display = "inline-block";
     });
 
     readLessBtn.addEventListener("click", function () {
-        moreText.style.display = "none";
-        readMoreBtn.style.display = "inline-block";
-        readLessBtn.style.display = "none";
+      moreText.style.display = "none";
+      readMoreBtn.style.display = "inline-block";
+      readLessBtn.style.display = "none";
     });
-});
+  }
 
+  /* ===================== */
+  /* Newsletter */
+  /* ===================== */
+  const newsletterForm = document.querySelector(".newsletter form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-document.querySelectorAll('.social-btn').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        btn.style.boxShadow = "0 0 15px rgba(177,116,233,0.8)";
+      const emailInput = newsletterForm.querySelector("input[type='email']");
+      const msg = document.createElement("p");
+      msg.id = "newsletterMsg";
+      newsletterForm.after(msg);
+
+      if (
+        emailInput.value.trim() === "" ||
+        !emailInput.value.includes("@")
+      ) {
+        msg.textContent = "Please enter a valid email.";
+        msg.className = "error";
+      } else {
+        msg.textContent = "Thank you for subscribing!";
+        msg.className = "success";
+        emailInput.value = "";
+      }
     });
-    btn.addEventListener('mouseleave', () => {
-        btn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-    });
-});
+  }
 
-
-const newsletterForm = document.querySelector(".newsletter form");
-if (newsletterForm) {
-  newsletterForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const emailInput = newsletterForm.querySelector("input[type='email']");
-    const msg = document.createElement("p");
-    msg.id = "newsletterMsg";
-    newsletterForm.after(msg);
-
-    if (emailInput.value.trim() === "" || !emailInput.value.includes("@")) {
-      msg.textContent = "Please enter a valid email.";
-      msg.className = "error";
-    } else {
-      msg.textContent = "Thank you for subscribing!";
-      msg.className = "success";
-      emailInput.value = "";
-    }
-  });
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
+  /* ===================== */
+  /* Hero Slider */
+  /* ===================== */
   const slides = document.querySelectorAll(".slides img");
   let currentIndex = 0;
-  const intervalTime = 4000; // 4 seconds
+  const intervalTime = 4000;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -84,15 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (slides.length > 0) {
-    showSlide(currentIndex); // Show first slide
+    showSlide(currentIndex);
     setInterval(nextSlide, intervalTime);
   }
-});
 
-
-// Toggle mobile menu
-// ===== Hamburger Menu =====
-document.addEventListener("DOMContentLoaded", () => {
+  /* ===================== */
+  /* Hamburger Menu */
+  /* ===================== */
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector("nav ul");
 
@@ -101,28 +98,42 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.toggle("active");
     });
   }
-});
 
-// ===== Review Books Carousel =====
-const bookBox = document.querySelector(".featured_book_box");
-const bookCards = document.querySelectorAll(".featured_book_card");
+  /* ===================== */
+  /* Review Books Carousel */
+  /* ===================== */
+  const bookBox = document.querySelector(".featured_book_box");
+  const bookCards = document.querySelectorAll(".featured_book_card");
+  const prevBtn = document.getElementById("prevBook");
+  const nextBtn = document.getElementById("nextBook");
 
-let currentBook = 0;
+  let currentBook = 0;
+  let booksPerView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
 
-function showBook(index) {
-  if (bookBox) {
-    bookBox.style.transform = `translateX(-${index * 100}%)`;
+  function updateBooksPerView() {
+    booksPerView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
+    showBook(currentBook);
   }
-}
 
-// Next / Prev Buttons
-document.getElementById("nextBook")?.addEventListener("click", () => {
-  currentBook = (currentBook + 1) % bookCards.length;
-  showBook(currentBook);
+  function showBook(index) {
+    if (bookBox) {
+      const cardWidth = bookCards[0].offsetWidth + 40; // card + margin
+      bookBox.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+  }
+
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentBook = (currentBook + 1) % bookCards.length;
+      showBook(currentBook);
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentBook = (currentBook - 1 + bookCards.length) % bookCards.length;
+      showBook(currentBook);
+    });
+  }
+
+  window.addEventListener("resize", updateBooksPerView);
+  updateBooksPerView();
 });
-
-document.getElementById("prevBook")?.addEventListener("click", () => {
-  currentBook = (currentBook - 1 + bookCards.length) % bookCards.length;
-  showBook(currentBook);
-});
-
